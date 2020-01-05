@@ -6,9 +6,9 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{166BEBC3-49F6-4B9F-B401-479822CCE2D3}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <StartupObject>ConsoleApp_Front.Module1</StartupObject>
+    <StartupObject>ConsoleApp_Front.Starting</StartupObject>
     <RootNamespace>ConsoleApp_Front</RootNamespace>
-    <AssemblyName>ConsoleApp_Front</AssemblyName>
+    <AssemblyName>ConsoleApp-Front</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Console</MyType>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
@@ -22,7 +22,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>ConsoleApp_Front.xml</DocumentationFile>
+    <DocumentationFile>ConsoleApp-Front.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -32,7 +32,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>ConsoleApp_Front.xml</DocumentationFile>
+    <DocumentationFile>ConsoleApp-Front.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -69,7 +69,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Module1.vb" />
+    <Compile Include="Starting.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -105,6 +105,12 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary-Back\ClassLibrary-Back.csproj">
+      <Project>{7c6e26c5-01c4-48ac-91a7-91a4d6ce7333}</Project>
+      <Name>ClassLibrary-Back</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
